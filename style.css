@@ -5,4 +5,5 @@ th{ color:#FF3300;}
 #nav {azimuth:left-side; } 
 #index { padding-bottom: 5px; padding-top: 5px; font-size: 16px; margin: 110px 0px auto 0px; padding: 0px 10px 30px 10px; }
 #text{ text-align:center; font-size:16px; margin: 90px 0px auto 0px; padding: 0px 5px 5px 5px;}
-.ch_name, .authorline, .sname{ color:#FF0000; margin-top: 1em; font-weight: bold; } 
+.ch_name, .authorline, .sname{ color:#FF0000; margin-top: 1em; font-weight: bold; padding-bottom:10px;} 
+p {padding-top: 3px; padding-bottom: 3px;}
