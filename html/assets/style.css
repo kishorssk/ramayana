@@ -19,7 +19,10 @@ li a {
     display: block;
 }
 
-
+.snameHighlight{
+	background-color: #8888D8;
+	color : #FFFFFF 
+}
 
 .main-navbar-fixed-top {
     position: fixed;
