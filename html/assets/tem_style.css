@@ -1,3 +1,8 @@
+body{
+	font-size: 18px;
+	line-height: 1.5em;
+}
+
 @font-face {
   font-family: 'Kedage-n';
   src: url('Kedage-n.ttf');
@@ -46,4 +51,10 @@ hr{border-top: 2px solid #eee;}
 {
 	color : #800000;
 	font-size : 20px;
+}
+.gap-above{
+	margin-top: 30px;
+}
+.margin-zero{
+	margin: 0px;
 }
