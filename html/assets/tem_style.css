@@ -58,3 +58,10 @@ hr{border-top: 2px solid #eee;}
 .margin-zero{
 	margin: 0px;
 }
+.kanda img{
+	width: 180px;
+	margin: 20px 20px 10px 20px;
+}
+.kanda figure{
+	float: left;
+}
