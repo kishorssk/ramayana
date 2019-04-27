@@ -1,6 +1,6 @@
 function script()
 {
-	var highLightWord = location.hash.substr(1);
+	var highLightWord = decodeURIComponent(location.hash.substr(1));
 	if(highLightWord.length > 0)
 	{
 		console.log('Found');
