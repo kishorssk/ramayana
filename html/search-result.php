@@ -58,8 +58,9 @@
 						select * from searchtable where " . $kandaFilter . ") as tb1 
 				  where text like '%$text%' order by kanda, sarga";
 	}
-	$result = mysql_query($query) or die(mysql_error());
-	$num_rows = mysql_num_rows($result);
+	
+	$result = $db->query($query);
+	$num_rows = $result->num_rows;
 	echo $query;
 ?>
 <br>
@@ -69,7 +70,7 @@
 <h3>ಹುಡುಕು</h3>
 </div>
 <?php
-	$kandaArray = array( 'aranya_kanda' => 'ಅರಣ್ಯಕಾಂಡ' , 'ayodhya_kanda' => 'ಅಯೋಧ್ಯಾಕಾಂಡ' , 'bala_kanda' => 'ಬಾಲಕಾಂಡ' , 'kishkindha_kanda' => 'ಕಿಷ್ಕಿಂಧಾಕಾಂಡ' , 'sundara_kanda' => 'ಸುಂದರಕಾಂಡ' , 'yuddha_kanda' => 'ಯುದ್ಧಕಾಂಡ');
+	$kandaArray = array( 'aranya_kanda' => 'ಅರಣ್ಯಕಾಂಡ' , 'ayodhya_kanda' => 'ಅಯೋಧ್ಯಾಕಾಂಡ' , 'bala_kanda' => 'ಬಾಲಕಾಂಡ' , 'kishkindha_kanda' => 'ಕಿಷ್ಕಿಂಧಾಕಾಂಡ' , 'sundara_kanda' => 'ಸುಂದರಕಾಂಡ' , 'yuddha_kanda' => 'ಯುದ್ಧಕಾಂಡ', 'uttara_kanda' => 'ಉತ್ತರಕಾಂಡಃ');
 	$kanda = '';
 	$i = 0;
 	if($num_rows > 0)
@@ -83,7 +84,7 @@
 			echo "<span class=\"result\">  " . toKannada($num_rows) . " ಫಲಿತಾಂಶಗಳು ಸಿಕ್ಕಿವೆ </span><br/><br/><br/>";
 		}
 		
-		while($row = mysql_fetch_assoc($result))
+		while($row = $result->fetch_assoc())
 		{
 			if($kanda == '' || $kanda != $row['kanda'])
 			{
