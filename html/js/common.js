@@ -38,5 +38,11 @@ function script()
 		document.location.hash = highLightWord;
 		var x = document.getElementsByClassName("header_top");
 		x[0].style.position = "relative";
+
+		$(document).ready(function() {
+			$('html, body').animate({
+			    scrollTop: $('.snameHighlight').offset().top - '100'
+			}, 'slow');
+		});
 	}
 }
