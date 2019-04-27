@@ -10,24 +10,23 @@
 
 <body>
 
-<!--Header --->
-<div class="header_top">  
-	<div class="col-xs-12">
-		<a href="search.php"><span class="glyphicon glyphicon-search  pull-right" name="search"></span></a>
-		<p style="font-size:30px; text-shadow:inherit;">ಶ್ರೀಮದ್ವಾಲ್ಮೀಕಿರಾಮಾಯಣಮ್</p>
-		<p style="font-size:17px; padding-top:10px;"><a href="../index.html"><span class="glyphicon glyphicon-home" title="Home"></span></a>&emsp;&emsp;&emsp;&emsp;&emsp;
-		<a href="bala_kanda.html">ಬಾಲಕಾಂಡ</a>&emsp;&emsp;&emsp;&emsp;&emsp;
-		<a href="ayodhya_kanda.html">ಅಯೋಧ್ಯಾಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
-		<a href="aranya_kanda.html">ಅರಣ್ಯಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
-		<a href="kishkindha_kanda.html">ಕಿಷ್ಕಿಂಧಾಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
-		<a href="sundara_kanda.html">ಸುಂದರಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
-		<a href="yuddha_kanda.html">ಯುದ್ಧಕಾಂಡ</a></p> &emsp;&emsp;&emsp;&emsp;&emsp;
-	
-		</p>
+	<!--Header --->
+	<div class="header_top">  
+		<div class="col-xs-12">
+			<p style="font-size:30px; text-shadow:inherit;">ಶ್ರೀಮದ್ವಾಲ್ಮೀಕಿರಾಮಾಯಣಮ್</p>
+			<p style="font-size:17px; padding-top:10px;"><a href="../index.html"><span class="glyphicon glyphicon-home" title="Home"></span></a>&emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="bala_kanda.html">ಬಾಲಕಾಂಡ</a>&emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="ayodhya_kanda.html">ಅಯೋಧ್ಯಾಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="aranya_kanda.html">ಅರಣ್ಯಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="kishkindha_kanda.html">ಕಿಷ್ಕಿಂಧಾಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="sundara_kanda.html">ಸುಂದರಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="yuddha_kanda.html">ಯುದ್ಧಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="search.php"><span class="glyphicon glyphicon-search" name="search"></span></a>
+			</p>
+		</div>
 	</div>
-</div>
-<!-- Header Close -->
-<?php
+	<!-- Header Close -->
+	<?php
 	require_once("common.php");
 	include("connect.php");
 	$check = '';
@@ -55,67 +54,67 @@
 		}
 		$kandaFilter = preg_replace('/ OR $/', '' , $sumne);
 		$query = "select * from (
-						select * from searchtable where " . $kandaFilter . ") as tb1 
-				  where text like '%$text%' order by kanda, sarga";
+		select * from searchtable where " . $kandaFilter . ") as tb1 
+		where text like '%$text%' order by kanda, sarga";
 	}
 	
 	$result = $db->query($query);
 	$num_rows = $result->num_rows;
 	echo $query;
-?>
-<br>
-<div class="container">
-<div class="row" id="index">
-<div class="col-xs-12" align="center">
-<h3>ಹುಡುಕು</h3>
-</div>
-<?php
-	$kandaArray = array( 'aranya_kanda' => 'ಅರಣ್ಯಕಾಂಡ' , 'ayodhya_kanda' => 'ಅಯೋಧ್ಯಾಕಾಂಡ' , 'bala_kanda' => 'ಬಾಲಕಾಂಡ' , 'kishkindha_kanda' => 'ಕಿಷ್ಕಿಂಧಾಕಾಂಡ' , 'sundara_kanda' => 'ಸುಂದರಕಾಂಡ' , 'yuddha_kanda' => 'ಯುದ್ಧಕಾಂಡ', 'uttara_kanda' => 'ಉತ್ತರಕಾಂಡಃ');
-	$kanda = '';
-	$i = 0;
-	if($num_rows > 0)
-	{
-		if($num_rows == 1)
-		{
-			echo "<span class=\"result\">  " . toKannada($num_rows) . " ಫಲಿತಾಂಶ ಸಿಕ್ಕಿದೆ </span><br/><br/><br/>";
-		}
-		else
-		{
-			echo "<span class=\"result\">  " . toKannada($num_rows) . " ಫಲಿತಾಂಶಗಳು ಸಿಕ್ಕಿವೆ </span><br/><br/><br/>";
-		}
-		
-		while($row = $result->fetch_assoc())
-		{
-			if($kanda == '' || $kanda != $row['kanda'])
+	?>
+	<br>
+	<div class="container">
+		<div class="row" id="index">
+			<div class="col-xs-12" align="center">
+				<h3>ಹುಡುಕು</h3>
+			</div>
+			<?php
+			$kandaArray = array( 'aranya_kanda' => 'ಅರಣ್ಯಕಾಂಡ' , 'ayodhya_kanda' => 'ಅಯೋಧ್ಯಾಕಾಂಡ' , 'bala_kanda' => 'ಬಾಲಕಾಂಡ' , 'kishkindha_kanda' => 'ಕಿಷ್ಕಿಂಧಾಕಾಂಡ' , 'sundara_kanda' => 'ಸುಂದರಕಾಂಡ' , 'yuddha_kanda' => 'ಯುದ್ಧಕಾಂಡ', 'uttara_kanda' => 'ಉತ್ತರಕಾಂಡಃ');
+			$kanda = '';
+			$i = 0;
+			if($num_rows > 0)
 			{
-				$kanda = $row['kanda'];
-				if($i != 0)
+				if($num_rows == 1)
 				{
-					echo '</div>';
+					echo "<span class=\"result\">  " . toKannada($num_rows) . " ಫಲಿತಾಂಶ ಸಿಕ್ಕಿದೆ </span><br/><br/><br/>";
 				}
-				
-				echo '	<div class="kanda">
-							<span class="kandaName">' . $kandaArray[$row['kanda']] . '<br/>
-								&nbsp;<a href="' . $row['kanda'] . '/' .$row['sarga'] . '.html#' .$text. '">' . toKannada(str_pad(substr($row['sarga'], 5), 3 , "0" , STR_PAD_LEFT) )  . 'ನೇ ಸರ್ಗಃ</a> &nbsp;|
-							</span>
+				else
+				{
+					echo "<span class=\"result\">  " . toKannada($num_rows) . " ಫಲಿತಾಂಶಗಳು ಸಿಕ್ಕಿವೆ </span><br/><br/><br/>";
+				}
+
+				while($row = $result->fetch_assoc())
+				{
+					if($kanda == '' || $kanda != $row['kanda'])
+					{
+						$kanda = $row['kanda'];
+						if($i != 0)
+						{
+							echo '</div>';
+						}
+
+						echo '	<div class="kanda">
+						<span class="kandaName">' . $kandaArray[$row['kanda']] . '<br/>
+						&nbsp;<a href="' . $row['kanda'] . '/' .$row['sarga'] . '.html#' .$text. '">' . toKannada(str_pad(substr($row['sarga'], 5), 3 , "0" , STR_PAD_LEFT) )  . 'ನೇ ಸರ್ಗಃ</a> &nbsp;|
+						</span>
 						';
-			}
-			elseif($kanda == $row['kanda'])
-			{
-				echo '	<span class="kandaName">
-							&nbsp;<a href="' . $row['kanda'] . '/' .$row['sarga'] . '.html#' .$text. '">' . toKannada(str_pad(substr($row['sarga'], 5), 3 , "0" , STR_PAD_LEFT) )  . 'ನೇ ಸರ್ಗಃ</a> &nbsp;| 
+					}
+					elseif($kanda == $row['kanda'])
+					{
+						echo '	<span class="kandaName">
+						&nbsp;<a href="' . $row['kanda'] . '/' .$row['sarga'] . '.html#' .$text. '">' . toKannada(str_pad(substr($row['sarga'], 5), 3 , "0" , STR_PAD_LEFT) )  . 'ನೇ ಸರ್ಗಃ</a> &nbsp;| 
 						</span>';
+					}
+					$i++;
+				}
+				echo '</div>';
 			}
-			$i++;
-		}
-		echo '</div>';
-	}
-	else
-	{
-		echo "No results Found, Go back and search again\n";
-		exit(0);
-	}
-	
-?>
-</body>
-</html>
+			else
+			{
+				echo "No results Found, Go back and search again\n";
+				exit(0);
+			}
+
+			?>
+		</body>
+		</html>
