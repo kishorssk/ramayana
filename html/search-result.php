@@ -21,6 +21,7 @@
 				<a href="kishkindha_kanda.html">ಕಿಷ್ಕಿಂಧಾಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
 				<a href="sundara_kanda.html">ಸುಂದರಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
 				<a href="yuddha_kanda.html">ಯುದ್ಧಕಾಂಡ</a> &emsp;&emsp;&emsp;&emsp;&emsp;
+				<a href="yuddha_kanda.html">ಉತ್ತರಕಾಂಡಃ</a>&emsp;&emsp;&emsp;&emsp;&emsp;
 				<a href="search.php"><span class="glyphicon glyphicon-search" name="search"></span></a>
 			</p>
 		</div>
