@@ -70,7 +70,7 @@
 				<h3>ಹುಡುಕು</h3>
 			</div>
 			<?php
-			$kandaArray = array( 'aranya_kanda' => 'ಅರಣ್ಯಕಾಂಡ' , 'ayodhya_kanda' => 'ಅಯೋಧ್ಯಾಕಾಂಡ' , 'bala_kanda' => 'ಬಾಲಕಾಂಡ' , 'kishkindha_kanda' => 'ಕಿಷ್ಕಿಂಧಾಕಾಂಡ' , 'sundara_kanda' => 'ಸುಂದರಕಾಂಡ' , 'yuddha_kanda' => 'ಯುದ್ಧಕಾಂಡ', 'uttara_kanda' => 'ಉತ್ತರಕಾಂಡಃ');
+			$kandaArray = array( 'aranya_kanda' => 'ಅರಣ್ಯಕಾಂಡಃ' , 'ayodhya_kanda' => 'ಅಯೋಧ್ಯಾಕಾಂಡಃ' , 'bala_kanda' => 'ಬಾಲಕಾಂಡಃ' , 'kishkindha_kanda' => 'ಕಿಷ್ಕಿಂಧಾಕಾಂಡಃ' , 'sundara_kanda' => 'ಸುಂದರಕಾಂಡಃ' , 'yuddha_kanda' => 'ಯುದ್ಧಕಾಂಡಃ', 'uttara_kanda' => 'ಉತ್ತರಕಾಂಡಃ');
 			$kanda = '';
 			$i = 0;
 			if($num_rows > 0)

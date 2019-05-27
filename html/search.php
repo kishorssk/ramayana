@@ -60,12 +60,12 @@
 					</div><br>
 					<div class="row">
 						<div class="col-xs-6">
-							<label class="toggle"><input type="checkbox" value="bala_kanda" name="check[]">&nbsp;ಬಾಲಕಾಂಡ</label><br />
-							<label class="toggle"><input type="checkbox" value="ayodhya_kanda" name="check[]">&nbsp;ಅಯೋಧ್ಯಾಕಾಂಡ </label><br />
-							<label class="toggle"><input type="checkbox" value="aranya_kanda" name="check[]">&nbsp;ಅರಣ್ಯಕಾಂಡ </label><br />
-							<label class="toggle"><input type="checkbox" value="kishkindha_kanda" name="check[]">&nbsp;ಕಿಷ್ಕಿಂಧಾಕಾಂಡ </label><br />
-							<label class="toggle"><input type="checkbox" value="sundara_kanda" name="check[]">&nbsp;ಸುಂದರಕಾಂಡ </label><br />
-							<label class="toggle"><input type="checkbox" value="yuddha_kanda" name="check[]">&nbsp;ಯುದ್ಧಕಾಂಡ</label><br />
+							<label class="toggle"><input type="checkbox" value="bala_kanda" name="check[]">&nbsp;ಬಾಲಕಾಂಡಃ</label><br />
+							<label class="toggle"><input type="checkbox" value="ayodhya_kanda" name="check[]">&nbsp;ಅಯೋಧ್ಯಾಕಾಂಡಃ </label><br />
+							<label class="toggle"><input type="checkbox" value="aranya_kanda" name="check[]">&nbsp;ಅರಣ್ಯಕಾಂಡಃ </label><br />
+							<label class="toggle"><input type="checkbox" value="kishkindha_kanda" name="check[]">&nbsp;ಕಿಷ್ಕಿಂಧಾಕಾಂಡಃ </label><br />
+							<label class="toggle"><input type="checkbox" value="sundara_kanda" name="check[]">&nbsp;ಸುಂದರಕಾಂಡಃ </label><br />
+							<label class="toggle"><input type="checkbox" value="yuddha_kanda" name="check[]">&nbsp;ಯುದ್ಧಕಾಂಡಃ</label><br />
 							<label class="toggle"><input type="checkbox" value="uttara_kanda" name="check[]">&nbsp;ಉತ್ತರಕಾಂಡಃ</label><br />
 							<label><input type="checkbox" value="ಎಲ್ಲಾ"  id="toggleAll" name="toggleAll">&nbsp;ಎಲ್ಲಾ</label>
 						</div>
